@@ -3,6 +3,6 @@ using namespace std;
 
 namespace phonetic{
 
-    string find(string text, const char[]);
+    string find(string text, char[]);
     
 };

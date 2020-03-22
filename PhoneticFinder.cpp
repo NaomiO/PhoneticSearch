@@ -4,6 +4,6 @@
 
 using namespace std;
 
-string find( string text, const char[]){
+string find( string text, char[]){
     cout << "Hi" << endl;
 }
