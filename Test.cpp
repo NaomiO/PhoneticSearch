@@ -4,15 +4,12 @@ using namespace phonetic;
 #include <string>
 using namespace std;
 
-
-
 TEST_CASE("Test replacement of p, f and b and replacement of y and i") {
     string text = "xxx happy yyy";
     CHECK(find(text, "happy") == string("happy"));
     CHECK(find(text, "habby") == string("happy"));
     CHECK(find(text, "hapby") == string("happy"));
     CHECK(find(text, "habpy") == string("happy"));
-
     CHECK(find(text, "haffy") == string("happy"));
     CHECK(find(text, "habby") == string("happy"));
     CHECK(find(text, "hafpy") == string("happy"));
@@ -35,7 +32,12 @@ TEST_CASE("Test replacement of p, f and b and replacement of y and i") {
     CHECK(find(text, "hafbi") == string("happy"));
     CHECK(find(text, "hafby") == string("happy"));
     CHECK(find(text, "habfi") == string("happy"));
-    CHECK(find(text, "habfy") == string("happy"));    
+    CHECK(find(text, "habfy") == string("happy"));   
+	CHECK_THROWS(find(text,""));
+	CHECK_THROWS(find(text,"happ"));
+	CHECK_THROWS(find(text,"h"));
+	CHECK_THROWS(find("","happ"));
+	
     
 }
 
@@ -208,4 +210,8 @@ TEST_CASE("Test replacement of letters and lower/upper cases") {
     CHECK(find(text, "Gezzika") == string("Jessica"));
     CHECK(find(text, "Gezziqa") == string("Jessica"));
     CHECK(find(text, "Gezzyka") == string("Jessica"));
+<<<<<<< HEAD
 CHECK(find(text, "Gezzyqa") == string("Jessica")); } 
+=======
+CHECK(find(text, "Gezzyqa") == string("Jessica")); }
+>>>>>>> 08fbe7e618c1743ef4c3d2a25bcc669cd636052a
