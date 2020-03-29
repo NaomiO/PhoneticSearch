@@ -6,6 +6,6 @@ using namespace std;
 
 namespace phonetic{
   string find(string text, string word){
-	  return word;
+	  return 0;
 	}
 };
