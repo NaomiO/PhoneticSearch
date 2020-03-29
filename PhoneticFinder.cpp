@@ -10,8 +10,8 @@ namespace phonetic{
 	int l = text.length();
 	string tempWord;
 	cout <<l <<endl;
-	if(l==0 || word.length() == 0 || text.empty() || word.empty()){
-		throw std::out_of_range("The text is empty");
+	if(l==0 || word.length() == 0 || text.empty() == 0 || word.empty() == 0){
+		throw std::invalid_argument("The text is empty");
 		}
 	
     for (int i = 0; i < l; i++) { 
