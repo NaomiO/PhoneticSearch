@@ -50,6 +50,7 @@ string find(string text, string word)
 
 	return 0;
 }
+}
 
 int compareWord(string tempWord, string word)
 {
