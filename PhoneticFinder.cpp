@@ -17,14 +17,19 @@ string find(string text, string word)
 
 	for (int i = 0; i < text.length(); i++)
 	{
-		if (text.at(i) == ' ' || i == text.length() - 1)
-		{
-			
 			if (i == text.length() - 1)
 			{
 				tempWord += text.at(i);
 			}
+			while(j < text.length()){
+				if (tempWord.at(j) == ' '){
+					tempWord.erase(tempWord.begin() + j);
+					}
+				j++;
+			}
+
 			ans = compareWord(tempWord, word);
+
 			if (ans == 0)
 			{
 				return tempWord;
@@ -37,19 +42,8 @@ string find(string text, string word)
 			{
 				tempWord = "";
 			}
-		}
-		else
-		{
-			tempWord += text.at(i);
-		}
-		while(text.at(j) == ' ' && j < text.length())
-		{
-			tempWord.erase(tempWord.begin()+j);
-			j++;
-	  }
-
+	}
 	return 0;
-}
 }
 
 int compareWord(string tempWord, string word)
