@@ -5,6 +5,7 @@ using namespace std;
 namespace phonetic{
   string find(string text, string word){
 	int ans;
+	char b;
 	int l = text.length();
 	string tempWord;
 	cout <<l <<endl;
@@ -14,10 +15,10 @@ namespace phonetic{
         if ((text=="") || (text==" ") || text.empty())
             throw std::invalid_argument("The text is empty");
 
-    for (int i = 0; i < l; i++) { 
-	if(text.at(i) == ' ' || i == l-1){
-		if(i==l-1){
-			 tempWord+=text.at(i);
+        for (int i = 0; i < l; i++) { 
+	 if(text.at(i) == ' ' || i == l-1){
+	  if(i==l-1){
+	   tempWord+=text.at(i);
 		}
 	 ans=compareWord(tempWord,word);
 	  if(ans ==0){
@@ -107,5 +108,5 @@ namespace phonetic{
 	   }
 	   
 	    }
-	return 0;}
+}
 };
