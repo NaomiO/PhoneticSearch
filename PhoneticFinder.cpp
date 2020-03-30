@@ -7,6 +7,7 @@ namespace phonetic
 string find(string text, string word)
 {
 	int ans;
+	int j = 0;
 	string tempWord;
 	if ((word == "") || (word == " ") || word.empty())
 		throw std::invalid_argument("The word is empty");
@@ -41,7 +42,6 @@ string find(string text, string word)
 		{
 			tempWord += text.at(i);
 		}
-		int j = 0;
 		while(text.at(j) == ' ' && j < text.length())
 		{
 			tempWord.erase(tempWord.begin()+j);
