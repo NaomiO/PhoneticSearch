@@ -127,7 +127,6 @@ int compareWord(string tempWord, string word)
 			{
 				i++;
 			}
-<<<<<<< HEAD
 			else
 				return 1;
 		}
@@ -139,15 +138,3 @@ int compareWord(string tempWord, string word)
 	return 0;
 }
 }; // namespace phonetic
-=======
-		   else return 1;
-		   
-	   }
-	   else{
-		   return 1;
-	   }
-	   
-	    }
-return 0;}
-};
->>>>>>> 62c0692f0e12c28dbef62b42fcd87a25bd6d4a1a
