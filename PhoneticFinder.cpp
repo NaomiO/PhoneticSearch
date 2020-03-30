@@ -16,9 +16,9 @@ string find(string text, string word)
 
 	for (int i = 0; i < text.length(); i++)
 	{
-		while(text.at(i) == ' ')
+		if (text.at(i) == ' ' || i == text.length() - 1)
 		{
-			tempWord.erase(tempWord.begin()+i);
+			
 			if (i == text.length() - 1)
 			{
 				tempWord += text.at(i);
@@ -37,7 +37,16 @@ string find(string text, string word)
 				tempWord = "";
 			}
 		}
-	}
+		else
+		{
+			tempWord += text.at(i);
+		}
+		int j = 0;
+		while(text.at(j) == ' ' && j < text.length())
+		{
+			tempWord.erase(tempWord.begin()+j);
+			j++;
+	  }
 
 	return 0;
 }
