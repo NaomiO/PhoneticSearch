@@ -17,10 +17,11 @@ string find(string text, string word)
 
 	for (int i = 0; i < text.length(); i++)
 	{
-			if (i == text.length() - 1)
-			{
-				tempWord += text.at(i);
-			}
+		if (i == text.length() - 1)
+		{
+	
+			tempWord += text.at(i);
+				
 			while(j < text.length()){
 				if (tempWord.at(j) == ' '){
 					tempWord.erase(tempWord.begin() + j);
@@ -29,7 +30,6 @@ string find(string text, string word)
 			}
 
 			ans = compareWord(tempWord, word);
-
 			if (ans == 0)
 			{
 				return tempWord;
@@ -42,7 +42,13 @@ string find(string text, string word)
 			{
 				tempWord = "";
 			}
+		}
+		else
+		{
+			tempWord += text.at(i);
+		}
 	}
+
 	return 0;
 }
 
