@@ -108,5 +108,5 @@ namespace phonetic{
 	   }
 	   
 	    }
-}
+return 0;}
 };
